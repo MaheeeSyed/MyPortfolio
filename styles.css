@@ -19,7 +19,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0; /* Start from the left edge */
-    width: 80%; /* Full width of the viewport */
+    width: 10%; /* Full width of the viewport */
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
