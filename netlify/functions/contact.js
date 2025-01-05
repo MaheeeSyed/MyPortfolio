@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
 exports.handler = async (event, context) => {
   // Check if the method is POST
