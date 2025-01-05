@@ -1,4 +1,7 @@
-
+// Import required modules
+const express = require('express');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 exports.handler = async (event, context) => {
