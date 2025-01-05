@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="logo">Syed Mahee</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experiences">Experiences</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Home Section -->
-<div id="home">
-    <video src="home.mp4" autoplay muted playsinline></video>
-</div>
-
-  <!-- About Section -->
-<div id="about">
-    <video src="about1.mp4" autoplay muted playsinline></video>
-</div>
-
-<div class="divider"></div> <!-- Divider between sections -->
-
-  <!-- Experience Section -->
-<div id="experiences">
-  <video src="about2.mp4" autoplay muted playsinline></video>
-  <video src="about3.mp4" autoplay muted playsinline></video>
-</div>
-  
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <video autoplay muted playsinline>
-      <source src="projects.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>I'd love to hear from you! Please fill out the form below to get in touch.</p>
-    <form action="/send-message" method="POST" id="contact-form">
-        <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+    <nav>
+        <div class="logo">Syed Mahee</div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="dropdown-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-  </section>
+    </nav>
 
+    <div id="home">
+        <video src="home.mp4" autoplay muted playsinline></video>
+    </div>
+
+    <div id="about">
+        <video src="about1.mp4" autoplay muted playsinline></video>
+    </div>
+
+    <div class="divider"></div> 
+
+    <div id="experiences">
+    <video src="about2.mp4" autoplay muted playsinline></video>
+    <video src="about3.mp4" autoplay muted playsinline></video>
+    </div>
+    
+
+    <section id="projects">
+        <video autoplay muted playsinline>
+            <source src="projects.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>I'd love to hear from you! Please fill out the form below to get in touch.</p>
+        <form action="/send-message" method="POST" id="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
