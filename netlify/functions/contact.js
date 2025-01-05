@@ -1,3 +1,4 @@
+require('dotenv').config();
 const nodemailer = require('nodemailer');
 
 exports.handler = async (event, context) => {
@@ -17,15 +18,15 @@ exports.handler = async (event, context) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'your-email@gmail.com',  // Replace with your email
-        pass: 'your-email-password',    // Replace with your email password or app password
+        user:process.env.EMAIL_USER,  // Replace with your email
+        pass: process.env.EMAIL_PASS,    // Replace with your email password or app password
       },
     });
 
     // Set up the email options
     const mailOptions = {
       from: formData.email,
-      to: 'recipient-email@example.com',  // Replace with the recipient's email
+      to: 'contactmaheesyed@gmail,com',  // Replace with the recipient's email
       subject: 'New Contact Form Submission',
       text: `Message from: ${formData.name}\n\n${formData.message}`,
     };
