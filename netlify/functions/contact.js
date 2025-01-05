@@ -17,8 +17,8 @@ exports.handler = async (event, context) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'contactmaheesyed@gmail.com,  // Replace with your email
-        pass: 'qkmn jzvp tsdh xjet',    // Replace with your email password or app password
+        user: 'contactmaheesyed@gmail.com',  // Corrected: Removed the extra comma
+        pass: 'qkmn jzvp tsdh xjet',         // Replace with your email password or app password
       },
     });
 
@@ -44,4 +44,5 @@ exports.handler = async (event, context) => {
     };
   }
 };
+
 
