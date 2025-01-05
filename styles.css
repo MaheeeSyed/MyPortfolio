@@ -18,7 +18,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0; /* Start from the left edge */
-    width: 100%; /* Full width */
+    width: 90%; /* Full width */
     background: rgba(0, 0, 0, 0.5); /* Transparent black */
     backdrop-filter: blur(10px); /* Add blur for a glass effect */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
