@@ -26,7 +26,7 @@ exports.handler = async (event, context) => {
     // Set up the email options
     const mailOptions = {
       from: formData.email,
-      to: 'contactmaheesyed@gmail,com',  // Replace with the recipient's email
+      to: 'contactmaheesyed@gmail.com',  // Replace with the recipient's email
       subject: 'New Contact Form Submission',
       text: `Message from: ${formData.name}\n\n${formData.message}`,
     };
