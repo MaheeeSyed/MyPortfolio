@@ -65,25 +65,27 @@ nav ul li a:hover {
     color: black; /* Invert text color */
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness (Horizontal Fit) */
 @media (max-width: 768px) {
     nav {
-        /* No change to the flex direction */
         padding: 10px; /* Reduce padding */
     }
-    
-    nav .logo{
-        font-size: 1.2em;
-        margin-left: 5px;
+
+    nav .logo {
+        font-size: 1.2em; /* Reduce logo font size */
+        margin-left: 5px; /* Reduce logo margin */
     }
 
     nav ul {
-        gap: 5px; /* Reduce gap to fit more items */
+        gap: 5px; /* Reduce gap between items */
+        flex-wrap: nowrap; /* Prevent wrapping to the next line */
+        overflow-x: auto; /* Allow horizontal scrolling */
     }
 
     nav ul li a {
-        font-size: 1em; /* Slightly reduce font size */
+        font-size: 1em; /* Reduce font size */
         padding: 5px 7px; /* Reduce padding */
+        white-space: nowrap; /* Prevent text wrapping within links */
     }
 
     h2 {
