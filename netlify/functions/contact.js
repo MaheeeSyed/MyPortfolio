@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 const nodemailer = require('nodemailer');
 
 exports.handler = async (event, context) => {
@@ -18,8 +18,8 @@ exports.handler = async (event, context) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user:process.env.EMAIL_USER,  // Replace with your email
-        pass: process.env.EMAIL_PASS,    // Replace with your email password or app password
+        user: 'contactmaheesyed@gmail.com,  // Replace with your email
+        pass: 'qkmn jzvp tsdh xjet',    // Replace with your email password or app password
       },
     });
 
