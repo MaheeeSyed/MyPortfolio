@@ -1,3 +1,4 @@
+require('dotenv').config();
 // Import required modules
 const express = require('express');
 const nodemailer = require('nodemailer');
@@ -21,8 +22,8 @@ app.post('/send-message', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail', // You can use other email services like Outlook, Yahoo, etc.
     auth: {
-      user: 'contactmaheesyed@gmail.com', // Replace with your email address
-      pass: 'nsol yvgm acbc lfqj',  // Replace with your email password or app password
+      user: process.env.EMAIL_USER, // Replace with your email address
+      pass: process.env.EMAIL_PASS,  // Replace with your email password or app password
     },
   });
 
