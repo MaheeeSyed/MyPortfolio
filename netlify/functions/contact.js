@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 
 exports.handler = async (event, context) => {
   // Check if the method is POST
@@ -17,8 +17,8 @@ exports.handler = async (event, context) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'contactmaheesyed@gmail.com',  // Corrected: Removed the extra comma
-        pass: 'qkmn jzvp tsdh xjet',         // Replace with your email password or app password
+        user: process.env.EMAIL_USER,  // Use environment variable for security
+        pass: process.env.EMAIL_PASS,  // Use environment variable for security
       },
     });
 
@@ -38,11 +38,13 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ message: 'Message sent successfully!' }),
     };
   } catch (error) {
+    console.error('Error sending message:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({ message: 'Error sending message', error }),
     };
   }
 };
+
 
 
